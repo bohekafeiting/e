@@ -5,5 +5,8 @@ function thousands_separators(num) {
   m=Math.floor(num);
   st=m+'';
   st=st.split('').reverse().join('').replace(/(\d{3})/g,'$1,').replace(/\,$/,'').split('').reverse().join('');
-  return (st+num.substring(y));
+  if(y==-1)
+    return st;
+  else
+    return (st+num.substring(y));
 } 
